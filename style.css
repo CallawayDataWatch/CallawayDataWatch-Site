@@ -1,0 +1,270 @@
+/* ============================================
+   Callaway Data Watch
+   Site stylesheet, used by all pages
+   ============================================ */
+
+
+/* ---- Base ---- */
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  color: #1e2a33;
+  background: #f7f9fb;
+  line-height: 1.6;
+}
+
+
+/* ---- Header ---- */
+
+header {
+  text-align: center;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 4px solid #4a90c2;
+}
+
+.logo {
+  width: 140px;
+  height: auto;
+  margin-bottom: 0.5rem;
+  mix-blend-mode: multiply;
+}
+
+header h1 {
+  margin: 0.5rem 0 1rem;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #16324f;
+  letter-spacing: -0.5px;
+}
+
+.tagline {
+  color: #5a6b78;
+  font-size: 1.05rem;
+  margin: 0 0 1.25rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #16324f;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  border-bottom-color: #f2b705;
+}
+
+
+/* ---- Sections ---- */
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+section h2 {
+  color: #16324f;
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid #4a90c2;
+  padding-left: 0.75rem;
+}
+
+section p {
+  font-size: 1.05rem;
+  color: #333;
+}
+
+
+/* ---- Highlight / call-to-action box ---- */
+
+.highlight {
+  background: white;
+  border: 1px solid #e3e9ec;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.highlight.urgent {
+  border: 2px solid #f2b705;
+  background: #fffdf5;
+}
+
+.highlight h2 {
+  border: none;
+  padding: 0;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background: #4a90c2;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: #16324f;
+}
+
+
+/* ---- Contact links ---- */
+
+.contact-links {
+  margin-top: 0.5rem;
+}
+
+.contact-links a {
+  color: #16324f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-links a:hover {
+  color: #4a90c2;
+  text-decoration: underline;
+}
+
+
+/* ---- Take Action page: full-width banner ---- */
+
+.action-banner {
+  background: linear-gradient(135deg, #16324f, #1e4a72);
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+}
+
+.action-banner h2 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin: 0 0 1rem;
+  color: #f2b705;
+  border: none;
+  padding: 0;
+}
+
+.action-banner p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #eef3f7;
+}
+
+
+/* ---- Take Action page: numbered cards ---- */
+
+.action-cards-section {
+  margin-bottom: 2.5rem;
+}
+
+.action-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.action-card {
+  background: white;
+  border: 1px solid #e3e9ec;
+  border-top: 5px solid #f2b705;
+  border-radius: 10px;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.action-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(22, 50, 79, 0.15);
+}
+
+.action-num {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #f2b705;
+  letter-spacing: 1px;
+  margin-bottom: 0.35rem;
+}
+
+.action-card h3 {
+  color: #16324f;
+  font-size: 1.15rem;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.action-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0;
+}
+
+.action-note {
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #16324f;
+  margin-top: 1.5rem;
+}
+
+
+/* ---- Videos page ---- */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.video-embed {
+  background: white;
+  border: 1px solid #e3e9ec;
+  border-radius: 10px;
+  padding: 0.75rem;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-embed iframe,
+.video-embed blockquote {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+/* ---- Footer ---- */
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e3e9ec;
+  color: #9aa7b0;
+  font-size: 0.85rem;
+}
