@@ -31,6 +31,11 @@ header {
   height: auto;
   margin-bottom: 0.5rem;
   mix-blend-mode: multiply;
+  transition: transform 0.25s ease;
+}
+
+.logo:hover {
+  transform: scale(1.08);
 }
 
 header h1 {
@@ -122,6 +127,84 @@ section p {
 
 .button:hover {
   background: #16324f;
+}
+
+
+/* ---- Top-of-page call-to-action buttons (survey / donate) ----
+   These link OFF-SITE to affiliated third-party pages, so they
+   are styled distinctly from .button (which is used for our own
+   pages, like the Sunshine Archive). The small arrow makes the
+   "you are leaving this site" cue visible at a glance. */
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button-external {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.9rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.82rem;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.button-external:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(22, 50, 79, 0.18);
+}
+
+.button-survey {
+  background: #fffdf5;
+  color: #16324f;
+  border-color: #f2b705;
+}
+
+.button-survey:hover {
+  background: #f2b705;
+  color: #16324f;
+}
+
+.button-donate {
+  background: #fffdf5;
+  color: #16324f;
+  border-color: #f2b705;
+}
+
+.button-donate:hover {
+  background: #f2b705;
+  color: #16324f;
+}
+
+
+/* ---- Affiliated fundraiser/survey card ----
+   Small, quiet block: exists so the two off-site buttons above
+   don't outweigh our own content or read as "ours." */
+
+.affiliate-card {
+  background: #fdfaf0;
+  border: 1px solid #f0e2ad;
+  border-radius: 8px;
+  padding: 0.6rem 1rem 0.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.affiliate-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #8a7130;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  line-height: 1;
+  margin: 0.35rem 0 0;
 }
 
 
@@ -233,6 +316,19 @@ section p {
 
 /* ---- Videos page ---- */
 
+.coming-soon {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #8a7130;
+  background: #fdfaf0;
+  border: 1px solid #f0e2ad;
+  border-radius: 8px;
+  padding: 0.5rem;
+  max-width: 220px;
+  margin: 0 auto 1.5rem;
+}
+
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -255,6 +351,101 @@ section p {
 .video-embed blockquote {
   width: 100%;
   max-width: 100%;
+}
+
+
+/* ---- Fact Check page: banner ---- */
+
+.factcheck-banner {
+  background: linear-gradient(135deg, #16324f, #1e4a72);
+  color: white;
+  text-align: center;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+}
+
+.factcheck-banner h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.3;
+  margin: 0 0 1rem;
+  color: #f2b705;
+  border: none;
+  padding: 0;
+}
+
+.factcheck-banner p {
+  max-width: 700px;
+  margin: 0 auto 1.25rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #eef3f7;
+}
+
+.factcheck-banner .button {
+  margin-top: 0;
+}
+
+
+/* ---- Fact Check page: discrepancy list ---- */
+
+.discrepancy-list {
+  background: white;
+  border: 1px solid #e3e9ec;
+  border-radius: 10px;
+  padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+  margin-top: 1rem;
+}
+
+.discrepancy-list li {
+  margin-bottom: 1.25rem;
+  font-size: 1.02rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.discrepancy-list li:last-child {
+  margin-bottom: 0;
+}
+
+.discrepancy-list li::marker {
+  font-weight: 800;
+  color: #16324f;
+}
+
+
+/* ---- Fact Check page: exhibit photo gallery ---- */
+
+.exhibit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.exhibit {
+  background: white;
+  border: 1px solid #e3e9ec;
+  border-radius: 10px;
+  padding: 0.6rem;
+  margin: 0;
+  text-align: center;
+}
+
+.exhibit img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  cursor: zoom-in;
+}
+
+.exhibit figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #16324f;
 }
 
 
